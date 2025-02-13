@@ -1,16 +1,55 @@
-Country Info App
+# Country Info App
 
-Explore the world with the Country Info App!  Browse details about different countries, from population and capital cities to flags and presidents.  Easily search for countries and switch between light and dark themes.  Built with Flutter for a smooth experience on any mobile device.
+Explore the world with the **Country Info App**! This Flutter-based mobile application allows users to browse and discover details about different countries, including their population, capital cities, flags, and presidents. With an intuitive search function and theme customization, it provides a smooth and engaging user experience.
 
-Key Features:
+## 📌 What This Project Consists Of
+The **Country Info App** is designed to help users quickly access information about any country in a visually appealing and responsive interface. The app provides:
+- **A searchable country list** – Easily browse or filter through a database of countries.
+- **Detailed country views** – Tap on any country to view its detailed information, including population, capital, flag, and leadership.
+- **Theme customization** – Switch between light and dark modes for a personalized user experience.
+- **Smooth performance and responsiveness** – Optimized for both phones and tablets.
 
-Country List: Search and scroll through a list of countries.
-Detailed Views: Tap a country to see its flag, population, capital, and more.
-Theme Options: Choose between light and dark mode.
-Responsive Design: Works great on phones and tablets.
-Get Started:
+## 🛠 Dependencies Used & Why
+This project relies on key Flutter packages to enhance its functionality:
 
-Clone the repo: git clone https://github.com/xDAREY/HNG-MOBILE-TASK/tree/main/country_info
-Navigate to the project: cd country_info
-Install dependencies: flutter pub get
-Run the app: flutter run (Android) or flutter run --release (iOS)
+### 1️⃣ **Shared Preferences (shared_preferences)**
+- Used to **persist user preferences**, specifically for theme selection (light or dark mode).
+- Ensures that users retain their preferred theme even after closing and reopening the app.
+
+### 2️⃣ **HTTP (http)**
+- Facilitates **API calls** to fetch country data dynamically from an online source.
+- Ensures real-time and updated information instead of relying on hardcoded country details.
+
+These dependencies help create a **smooth, personalized, and interactive experience** for users.
+
+## 🚀 Getting Started
+Follow these simple steps to set up and run the **Country Info App**:
+
+### 1️⃣ Clone the repository:
+```sh
+git clone https://github.com/xDAREY/HNG-MOBILE-TASK/tree/main/country_info
+```
+
+### 2️⃣ Navigate to the project directory:
+```sh
+cd country_info
+```
+
+### 3️⃣ Install dependencies:
+```sh
+flutter pub get
+```
+
+### 4️⃣ Run the app:
+- For Android:
+```sh
+flutter run
+```
+- For iOS:
+```sh
+flutter run --release
+```
+
+## 📌 Summary
+The **Country Info App** is a feature-rich, Flutter-powered mobile application that provides users with an easy and efficient way to explore global data. With **real-time API fetching, persistent theme preferences, and a user-friendly interface**, it is a great resource for quick country information. 🚀🌍
+

@@ -1,7 +1,6 @@
-import 'package:country_info/splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
+import 'package:country_info/screens/splash_screen.dart';
+import 'services/theme_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,6 +16,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   ThemeMode _themeMode = ThemeMode.system;
+  final CountryInfoThemeService _themeService = CountryInfoThemeService();
 
   @override
   void initState() {
@@ -25,19 +25,21 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future<void> _loadTheme() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    bool isDark = prefs.getBool('isDarkMode') ?? false;
-    setState(() {
-      _themeMode = isDark ? ThemeMode.dark : ThemeMode.light;
-    });
+    final themeMode = await _themeService.getThemeMode();
+    if (mounted) {
+      setState(() {
+        _themeMode = themeMode;
+      });
+    }
   }
 
   void _toggleTheme(bool isDark) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool('isDarkMode', isDark);
-    setState(() {
-      _themeMode = isDark ? ThemeMode.dark : ThemeMode.light;
-    });
+    await _themeService.setThemeMode(isDark);
+    if (mounted) {
+      setState(() {
+        _themeMode = isDark ? ThemeMode.dark : ThemeMode.light;
+      });
+    }
   }
 
   @override
