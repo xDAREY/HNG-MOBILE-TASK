@@ -82,7 +82,7 @@ assets/
 1. Ensure you have Flutter installed. If not, install it from [Flutter's official site](https://flutter.dev/docs/get-started/install). 🔧
 2. Clone the repository:
    ```sh
-   git clone https://github.com/xDAREY/3d-controlla.git
+   git clone https://github.com/xDAREY/HNG-MOBILE-TASK/tree/main/_3d_controlla
    cd 3d-controlla
    ```
 3. Get dependencies:
